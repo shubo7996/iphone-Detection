@@ -13,7 +13,7 @@ while True:
     ret, img = cap.read()
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray)
-    phone = phone_cascade.detectMultiScale(gray, 30, 30)
+    phone = phone_cascade.detectMultiScale(gray, 50, 50)
 
     for (x,y,w,h) in phone:
         font = cv2.FONT_HERSHEY_SIMPLEX
